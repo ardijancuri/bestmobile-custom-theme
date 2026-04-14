@@ -1,0 +1,24 @@
+{
+  "name": "flavor-theme",
+  "version": "1.0.0",
+  "description": "Flavor WooCommerce Theme",
+  "scripts": {
+    "dev": "concurrently \"npx tailwindcss -i ./assets/css/src/main.css -o ./assets/css/dist/style.css --watch\" \"npx terser assets/js/src/*.js --output assets/js/dist/app.min.js --watch\"",
+    "build:css": "npx tailwindcss -i ./assets/css/src/main.css -o ./assets/css/dist/style.css --minify",
+    "build:js": "npx terser assets/js/src/app.js assets/js/src/header.js assets/js/src/slider.js assets/js/src/filters.js assets/js/src/products.js assets/js/src/product-page.js assets/js/src/cart.js assets/js/src/checkout.js assets/js/src/notifications.js -o assets/js/dist/app.min.js -c -m",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "postcss": "^8.4.0",
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^6.0.0",
+    "concurrently": "^8.0.0",
+    "terser": "^5.0.0"
+  },
+  "dependencies": {
+    "alpinejs": "^3.14.0",
+    "swiper": "^11.0.0",
+    "glightbox": "^3.3.0"
+  }
+}
