@@ -64,7 +64,7 @@ while ( have_posts() ) :
 	x-transition:leave="transition-transform ease-in duration-150"
 	x-transition:leave-start="translate-y-0"
 	x-transition:leave-end="translate-y-full"
-	class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg z-40 px-4 py-3 md:hidden"
+	class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-300 shadow-lg z-40 px-4 pb-3 md:hidden"
 	style="display: none;"
 >
 	<div class="flex items-center justify-between gap-3">
